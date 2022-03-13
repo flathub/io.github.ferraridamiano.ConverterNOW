@@ -11,6 +11,7 @@
 
   <metadata_license>MIT</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
+  <developer_name>Damiano Ferrari</developer_name>
 
   <supports>
     <control>pointing</control>
@@ -36,7 +37,7 @@
       Check the repository on GitHub: https://github.com/ferraridamiano/ConverterNOW
     </p>
     <p>
-      We also have a Web App! 🖥️ Check it out here: https://ferraridamiano.github.io/ConverterNOW/
+      We also have a Web App! 🖥️ Check it out here: https://ferraridamiano.github.io/ConverterNOW
     </p>
     <p>
       🌍 Converter NOW is free, without ads, it does not require any permission and we don&apos;t collect your data. If you believe in this project and want to support the developer make a donation: https://www.paypal.me/DemApps 🌍 Thanks to you we can always stay on 🔝
@@ -73,13 +74,16 @@
   <launchable type="desktop-id">io.github.ferraridamiano.ConverterNOW.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpeg</image>
+      <caption>Easily convert units. It's reliable, customizable, open source.</caption>
+      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/screenshots/desktop_1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpeg</image>
+      <caption>With an integrated calculator</caption>
+      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/screenshots/desktop_2.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpeg</image>
+      <caption>And a dynamic search box</caption>
+      <image>https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/screenshots/desktop_3.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.0"/>
