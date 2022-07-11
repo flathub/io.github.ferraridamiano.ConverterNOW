@@ -25,22 +25,17 @@ modules:
       - mv git_repo/snap/gui/converternow.desktop ${FLATPAK_ID}.desktop
       - desktop-file-edit ${FLATPAK_ID}.desktop --set-icon=${FLATPAK_ID}
       - install -Dm644 -t "${FLATPAK_DEST}/share/applications/" ${FLATPAK_ID}.desktop
-      - install -Dm644 icon.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
-#      - install -Dm644 git_repo/snap/gui/icon.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
+      - install -Dm644 git_repo/snap/gui/icon.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.1.2/converternow-linux.tar.gz
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.1.3/converternow-linux.tar.gz
         dest: ConverterNOW
-        sha256: 0633ab1b0eea14cc1e68b253666a7e25a80efba9bc83f782eec32d7682918943
+        sha256: 61369233935781ce612c7b2d2b018aa6432884fd433af7457d77b9d56bede8db
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v3.1.2
-        commit: 0f4af9b75900139b1f08acb6338e0629bf8b2323
+        tag: v3.1.3
+        commit: 9dd3765fcc3ea9d08bbd238550bf6044b3bca7ae
       - type: file
         path: io.github.ferraridamiano.ConverterNOW.appdata.xml
-      # To be included in git_repo in the next release
-      - type: file
-        url: https://raw.githubusercontent.com/ferraridamiano/ConverterNOW/master/snap/gui/icon.svg
-        sha256: e29558e8d17b9dcae5fc9be97441e3ce2f806584933b2bab474a962950985645
