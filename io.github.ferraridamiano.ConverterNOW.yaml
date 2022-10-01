@@ -29,11 +29,11 @@ modules:
       - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.0/converternow-linux.tar.gz
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.1/converternow-linux.tar.gz
         dest: ConverterNOW
-        sha256: 004a586b4a43ca2e4f4e2d2500d77c79e76414a618bcdbbebef8fb40c40a9a81
+        sha256: 8478fa99c6bfa50a3fffa7698e60288987e8339097c5861b174359a47d4ce2e4
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v3.2.0
-        commit: 115c41f21aeebde8a80e603b7edd3fbe34b7fe03
+        tag: v3.2.1
+        commit: 2a937394058e6092519cd9efc02985927447b027
