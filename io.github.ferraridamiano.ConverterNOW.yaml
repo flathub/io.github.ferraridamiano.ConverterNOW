@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/flatpak/flatpak-builder/master/data/flatpak-manifest.schema.json
 app-id: io.github.ferraridamiano.ConverterNOW
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 command: converternow
 separate-locales: false
@@ -29,11 +29,21 @@ modules:
       - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.1/converternow-linux.tar.gz
         dest: ConverterNOW
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.1/converternow-linux.tar.gz
         sha256: 8478fa99c6bfa50a3fffa7698e60288987e8339097c5861b174359a47d4ce2e4
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
+          tag-query: .tag_name
+          timestamp-query: .published_at
+          version-query: $tag | sub("^[vV]"; "")
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux.tar.gz"'
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
         tag: v3.2.1
         commit: 2a937394058e6092519cd9efc02985927447b027
+        x-checker-data:
+          type: git
+          tag-pattern": ^v([0-9.]+)$
