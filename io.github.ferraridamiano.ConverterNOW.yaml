@@ -30,8 +30,8 @@ modules:
     sources:
       - type: archive
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.1/converternow-linux.tar.gz
-        sha256: 8478fa99c6bfa50a3fffa7698e60288987e8339097c5861b174359a47d4ce2e4
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v3.2.0/converternow-linux.tar.gz
+        sha256: 004a586b4a43ca2e4f4e2d2500d77c79e76414a618bcdbbebef8fb40c40a9a81
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
