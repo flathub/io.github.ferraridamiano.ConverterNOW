@@ -39,7 +39,7 @@ modules:
           tag-query: .tag_name
           timestamp-query: .published_at
           version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-x64.tar.gz"'
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-x86_64.tar.gz"'
       - type: archive
         only-arches: ["aarch64"]
         dest: ConverterNOW
@@ -51,7 +51,7 @@ modules:
           tag-query: .tag_name
           timestamp-query: .published_at
           version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-arm64.tar.gz"'
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-aarch64.tar.gz"'
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
