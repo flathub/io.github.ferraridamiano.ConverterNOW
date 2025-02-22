@@ -42,8 +42,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v4.2.4
-        commit: b46674a557e89740899e54aae0aebca81e967e1b
+        tag: v4.3.0
+        commit: 44e99212c10fe15cf5e197685978aefdb92bcfd4
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
