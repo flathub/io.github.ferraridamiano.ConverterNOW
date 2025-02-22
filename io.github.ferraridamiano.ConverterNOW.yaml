@@ -29,18 +29,29 @@ modules:
       - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
+        only-arches: ["x86_64"]
         dest: ConverterNOW
-        url: "https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.0/converternow-linux-${arch}.tar.gz"
-        sha256:
-          x86_64: c497e782e313f54113ab48d7c791d73461defe5f838eb874eee852ff36c80564
-          aarch64: 44aff9045dd03a30840f08d9c9b379cf53cd31ebe943cd6ecf5dac2058ceb8e9
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.0/converternow-linux-x86_64.tar.gz
+        sha256: c497e782e313f54113ab48d7c791d73461defe5f838eb874eee852ff36c80564
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
           tag-query: .tag_name
           timestamp-query: .published_at
           version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-${arch}.tar.gz"'
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-x64.tar.gz"'
+      - type: archive
+        only-arches: ["aarch64"]
+        dest: ConverterNOW
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.0/converternow-linux-aarch64.tar.gz
+        sha256: 44aff9045dd03a30840f08d9c9b379cf53cd31ebe943cd6ecf5dac2058ceb8e9
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
+          tag-query: .tag_name
+          timestamp-query: .published_at
+          version-query: $tag | sub("^[vV]"; "")
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-arm64.tar.gz"'
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
