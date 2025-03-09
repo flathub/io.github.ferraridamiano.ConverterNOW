@@ -29,10 +29,10 @@ modules:
       - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
-        only-arches: ["x86_64"]
+        only-arches: [x86_64]
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.0/converternow-linux-x86_64.tar.gz
-        sha256: c497e782e313f54113ab48d7c791d73461defe5f838eb874eee852ff36c80564
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.1/converternow-linux-x86_64.tar.gz
+        sha256: 2b2153505ea3ef94fdfe7d9c8ce688c56f8e534803dfe35d5a733eba86a059ce
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
@@ -41,10 +41,10 @@ modules:
           version-query: $tag | sub("^[vV]"; "")
           url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-x86_64.tar.gz"'
       - type: archive
-        only-arches: ["aarch64"]
+        only-arches: [aarch64]
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.0/converternow-linux-aarch64.tar.gz
-        sha256: 44aff9045dd03a30840f08d9c9b379cf53cd31ebe943cd6ecf5dac2058ceb8e9
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.1/converternow-linux-aarch64.tar.gz
+        sha256: 73d3a87c35763977ffde341d15c04e66590d1a5e332ff3bac77a73bd8ca0ece7
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
@@ -55,8 +55,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v4.3.0
-        commit: 65869bdd2dd14c7c68a014bdc367bf8c885c8ed9
+        tag: v4.3.1
+        commit: 85af86690deab8ea18aa3be97169be6ddf7b2775
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
