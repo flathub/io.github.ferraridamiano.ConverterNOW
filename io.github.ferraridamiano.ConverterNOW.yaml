@@ -22,10 +22,10 @@ modules:
       - chmod +x /app/ConverterNOW/converternow
       - mkdir -p /app/bin
       - ln -s /app/ConverterNOW/converternow /app/bin/converternow
-      - mv git_repo/snap/gui/converternow.desktop ${FLATPAK_ID}.desktop
+      - mv git_repo/linux/${FLATPAK_ID}.desktop ${FLATPAK_ID}.desktop
       - desktop-file-edit ${FLATPAK_ID}.desktop --set-icon=${FLATPAK_ID}
       - install -Dm644 -t "${FLATPAK_DEST}/share/applications/" ${FLATPAK_ID}.desktop
-      - install -Dm644 git_repo/snap/gui/icon.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
+      - install -Dm644 git_repo/assets/app_icons/logo.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
       - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
     sources:
       - type: archive
