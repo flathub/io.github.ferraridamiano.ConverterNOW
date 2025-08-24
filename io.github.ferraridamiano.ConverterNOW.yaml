@@ -31,8 +31,8 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.3/converternow-linux-x86_64.tar.gz
-        sha256: 8fcd721ef592f30ff701747cee963578e956fcc08913ac6333bd15607dca20f9
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.4.0/converternow-linux-x86_64.tar.gz
+        sha256: 8a7ed99d2d216e3d69b2bbcd267a7377fc736cd30474e7c53ea15811a7335583
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
@@ -43,8 +43,8 @@ modules:
       - type: archive
         only-arches: [aarch64]
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.3/converternow-linux-aarch64.tar.gz
-        sha256: 294fbbc14c56206bb35bf1e11597e629ac1e3a909c9c10e271e279781d309495
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.4.0/converternow-linux-aarch64.tar.gz
+        sha256: 9bed6f600d64b26188498e68b20f35d892d06bfbbacce6971dce1d94ed3fd52d
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
@@ -55,8 +55,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v4.3.3
-        commit: 14bda063fce5c46ad187be5b95d3c41773339442
+        tag: v4.4.0
+        commit: 1ba34c7a11f27e8bca87b4174dfeb28a09fadef0
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
