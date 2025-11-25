@@ -31,8 +31,8 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: ConverterNOW
-        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.4.0/converternow-linux-x86_64.tar.gz
-        sha256: b7e0d7dc194182a36362f08a6771465c50c07195d0696e0c6ec11adf5a69054f
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.5.0/converternow-linux-x86_64.tar.gz
+        sha256: 3a2a7ce0b787838df968ab90bda93f5c9673e302c98a5de88ab6db88940e5a55
         x-checker-data:
           type: json
           url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
@@ -40,23 +40,23 @@ modules:
           timestamp-query: .published_at
           version-query: $tag | sub("^[vV]"; "")
           url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-x86_64.tar.gz"'
-      # - type: archive
-      #   only-arches: [aarch64]
-      #   dest: ConverterNOW
-      #   url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.3.3/converternow-linux-aarch64.tar.gz
-      #   sha256: 294fbbc14c56206bb35bf1e11597e629ac1e3a909c9c10e271e279781d309495
-      #   x-checker-data:
-      #     type: json
-      #     url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
-      #     tag-query: .tag_name
-      #     timestamp-query: .published_at
-      #     version-query: $tag | sub("^[vV]"; "")
-      #     url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-aarch64.tar.gz"'
+      - type: archive
+        only-arches: [aarch64]
+        dest: ConverterNOW
+        url: https://github.com/ferraridamiano/ConverterNOW/releases/download/v4.5.0/converternow-linux-aarch64.tar.gz
+        sha256: 39a85b2043047683311f78a6b8176c8493c33e47f9f3cc154f893247f9d016fc
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/ferraridamiano/ConverterNOW/releases/latest
+          tag-query: .tag_name
+          timestamp-query: .published_at
+          version-query: $tag | sub("^[vV]"; "")
+          url-query: '"https://github.com/ferraridamiano/ConverterNOW/releases/download/\($tag)/converternow-linux-aarch64.tar.gz"'
       - type: git
         dest: git_repo
         url: https://github.com/ferraridamiano/ConverterNOW
-        tag: v4.4.0
-        commit: 0d469f288cb3a85bda5c02172a249ac1ba736464
+        tag: v4.5.0
+        commit: 9e446b7ceca2edeb306adee9fcb5f9fcd7b715ca
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
