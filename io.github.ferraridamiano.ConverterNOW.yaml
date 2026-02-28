@@ -18,15 +18,16 @@ modules:
   - name: converternow
     buildsystem: simple
     build-commands:
-      - cp -r ConverterNOW /app/
-      - chmod +x /app/ConverterNOW/converternow
-      - mkdir -p /app/bin
-      - ln -s /app/ConverterNOW/converternow /app/bin/converternow
+      - mkdir -p "${FLATPAK_DEST}/ConverterNOW"
+      - cp -r ConverterNOW/. "${FLATPAK_DEST}/ConverterNOW/"
+      - chmod +x "${FLATPAK_DEST}/ConverterNOW/converternow"
+      - mkdir -p "${FLATPAK_DEST}/bin"
+      - ln -s "${FLATPAK_DEST}/ConverterNOW/converternow" "${FLATPAK_DEST}/bin/converternow"
       - mv git_repo/linux/${FLATPAK_ID}.desktop ${FLATPAK_ID}.desktop
       - desktop-file-edit ${FLATPAK_ID}.desktop --set-icon=${FLATPAK_ID}
       - install -Dm644 -t "${FLATPAK_DEST}/share/applications/" ${FLATPAK_ID}.desktop
       - install -Dm644 git_repo/assets/app_icons/logo.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
-      - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml "${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml"
     sources:
       - type: archive
         only-arches: [x86_64]
